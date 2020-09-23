@@ -1,5 +1,6 @@
 import React from "react";
 import Notification from "./Notification";
+import PropTypes from "prop-types";
 
 export default function Statistics({
   good,
@@ -24,3 +25,10 @@ export default function Statistics({
     </>
   );
 }
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number,
+};
